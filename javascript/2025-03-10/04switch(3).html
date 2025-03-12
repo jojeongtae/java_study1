@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let select = parseInt(prompt("연산을 골라주세요 1.덧셈/2.뺄셈/3.곱셈/4.나눗셈"))
+        let num1 = 0;
+        let num2 = 0;
+        let final = 0;
+
+
+        switch (select) {
+            
+            case 1:
+                num1 =parseInt(prompt("첫번째 숫자를 입력해 주세요"));
+                num2 =parseInt(prompt("두번째 숫자를 입력해 주세요"));
+                final = num1 + num2;
+                document.write("연산 결과: " + final);
+                break;
+            case 2:
+                
+                num1 =parseInt(prompt("첫번째 숫자를 입력해 주세요"));
+                num2 =parseInt(prompt("두번째 숫자를 입력해 주세요"));
+                final = num1 - num2;
+                document.write("연산 결과: " + final);
+                break;
+            case 3:
+                
+                num1 =parseInt(prompt("첫번째 숫자를 입력해 주세요"));
+                num2 =parseInt(prompt("두번째 숫자를 입력해 주세요"));
+                final = num1 * num2;
+                document.write("연산 결과: " + final);
+                break;
+            case 4:
+                num1 =parseInt(prompt("첫번째 숫자를 입력해 주세요"));
+                num2 =parseInt(prompt("두번째 숫자를 입력해 주세요"));
+                final = num1 / num2;
+                document.write("연산 결과: " + final);
+                break;
+            default:
+                document.write("다시");
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

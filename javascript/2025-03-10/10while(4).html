@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number=0;
+        let sum1=0;
+        let sum2=0;
+        let count1=0;
+        let count2=0;
+        while(number <100){
+            number++;
+            if(number%2===0){
+                sum1 = sum1+number;
+                count1++
+            }
+            else{
+                sum2 = sum2+number;
+                count2++
+            }
+
+
+        }
+        
+        document.write("짝수 " + count1);
+            document.write("홀수 "+count2);
+    </script>
+</body>
+
+</html>

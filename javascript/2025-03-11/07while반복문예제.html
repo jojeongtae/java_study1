@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        while(true){
+            let score = parseInt(prompt("점수를 입력하세요 (0~100)"));
+            if(score < 0 || score > 100){
+                confirm("0~100 사이로 입력해 주세요");
+                continue;
+            } 
+            if(score >= 60){
+                document.write("합격입니다.");
+                break;
+            }
+
+            document.write("불합격입니다.");
+            break;
+        }
+
+        
+
+    </script>
+</body>
+
+</html>

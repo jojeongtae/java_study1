@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        let number = 0;
+        let sum7 = 0;
+        let sum9 = 0;
+        let sum63= 0;
+        while(number<100){
+            number++;
+            if(number % 7 === 0){
+                sum7 = sum7 + number;
+            }
+            else if(number % 9 === 0){
+                sum9= sum9+ number;
+            }
+        }
+
+    //    let final = sum9+sum7
+    document.write("7의배수값: " + sum7+ "<br>");
+    document.write("9의배수값: " + sum9+ "<br>");
+
+    </script>
+</body>
+
+</html>

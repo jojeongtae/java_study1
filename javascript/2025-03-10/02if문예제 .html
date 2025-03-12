@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 강사님이 쓴코드
+        
+        let id = "qwer";
+        let pw = "asdf";
+
+        let inputId = prompt("아이디를 입력하세요");
+        let inputPw = prompt("비밀번호를 입력하세요");
+
+        if(inputId === id){
+            if(inputPw === pw){
+                document.write("로긘");
+            }else{
+                document.write("패스워드 틀림");
+            }
+        }else{
+            document.write("아이디 틀림");
+            }
+        
+
+
+
+
+
+        // 내가쓴거
+
+        // let uid = prompt("아이디를 입력하세요");
+        // let upw = prompt("비밀번호를 입력하세요");
+
+        // if(uid !== "qwer" || upw !== "asdf"){
+        //     if(uid !== "qwer"){
+        //         document.write("아이디 잘못됨");
+        //     }else{
+        //         document.write("비밀번호 잘못됨");
+        //     }
+        // }else{
+        //     document.write("로그인 성공");
+        // }
+
+
+
+
+        // GPT가 쓴 가독성 좋은 코드
+
+        // let uid = prompt("아이디를 입력하세요");
+        // let upw = prompt("비밀번호를 입력하세요");
+
+        // if(uid === "qwer" && upw === "asdf"){
+        //     document.write("로그인 성공");
+        // }else{
+        //     document.write(uid !== "qwer" ? "아이디잘못됨" : "비밀번호 잘못됨");
+        // }
+
+    </script>
+
+</body>
+
+</html>

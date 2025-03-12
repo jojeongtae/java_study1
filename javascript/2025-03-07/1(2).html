@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let coupon = Number(prompt("쿠폰 개수를 입력하시오"));
+        // document.write("그대가 가지고있는 쿠폰갯수는 " + coupon + "장 이며 잘 써주쇼. <br>")
+        // if(coupon >= 20){
+        //     document.write("여행용 가방");
+        // }else if(coupon >= 10){
+        //     document.write("다이어리");
+        // }else if(coupon > 0){
+        //     document.write("아아 한잔");
+        // }else{
+        //     document.write("넌 뭔데?");
+        // }
+
+
+
+        // if 안에 중첩으로 넣을경우 알트 쉬프트 f눌러서 들여쓰기해서 잘 확인
+        // 그리고 전체적인 범위를 먼저 넣어놓고 그다음 조건문을 완성해주면 된다.
+        // 예를 들어서 맨위에 if안에 점수의 틀을 넣고 그다음 그게 조건에 완성되지않으면 내용이 실행되니까
+        // else를 사용 그이후 다시 if를 써서 틀을 묶어준다.
+        // 맨 위에 if를 만족하지만 그 밑에 if를 만족 못할시 다른else가 작동되게 설정한다
+        let score = parseInt(prompt("점수 써"));
+
+        if (score < 0 || score > 100) {
+            document.write("다시써");
+        } else {
+            if (score >= 60) {
+                document.write("합격 <br>")
+                if (score >= 90 && score <= 100) {
+                    document.write("A등급임");
+                } else if (score >= 80 && score <= 89) {
+                    document.write("B등급임");
+                } else if (score >= 70 && score <= 79) {
+                    document.write("C등급임");
+                } else {
+                    document.write("D등급임");
+                }
+            } else {
+                document.write("불합격");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let base_rate = 3000;
+        let surCharge = parseInt(prompt("시간대를 입력해주세요/0~23시"));
+        let kmCharge = parseInt(prompt("탑승 거리를 입력해주세요/km"));
+        let money = 0;
+        
+
+
+        if(kmCharge <= 10){
+            money = 500;
+        }else{
+            money = 700;
+        }
+
+        let final = base_rate +(kmCharge*money);
+
+        if(surCharge >=22 || surCharge <=6){
+            final = final * 1.2
+        }
+        
+         
+        document.write("요금은 " + final + "원 입니다.");
+    </script>
+
+
+</body>
+
+</html>

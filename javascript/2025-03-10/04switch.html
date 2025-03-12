@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let coupon = parseInt(prompt("쿠폰 갯수를 입력해주세요"));
+        coupon = Math.floor(coupon / 10);
+        document.write("쿠폰: " + coupon + "장 입니다.<br>");
+        switch (coupon) {
+            case 2: document.write("여행가방");
+                break;
+            case 1:
+                document.write("다이어리");
+                break;
+            default:
+                document.write("커피 한잔");
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

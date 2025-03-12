@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 통장 10만원 있음 5만원 출금하면 5만원밑은 작은금액 그리고 잔액 그리고 오버하면 잔액이 부족
+
+        // 내가한거
+
+        // let maxMoney = 100000;
+        // let money = parseInt(prompt("출금하실 금액을 입력 해주세요"));
+        // let final = maxMoney - money;
+        // if (money > 100000) {
+        //     document.write("잔액이 부족합니다.");
+        // } else if (money < 50000) {
+        //     document.write("작은금액을 인출하셨습니다. <br> 잔액 출력: " + final);
+        // } else if (money >= 50000) {
+        //     document.write("큰금액을 인출하셨습니다.<br> 신중히 생각하세요 <br> 잔액 출력: " + final);
+        // }
+
+        // 강사님이 한거
+        let balance = 100000;
+        let withdraw = parseInt(prompt("출금할 금액을 입력하세요"));
+
+        if (withdraw < 0) {
+            document.write("제대로적으세요");
+        } else {
+            if (withdraw > balance) {
+                document.write("잔액이 부족합니다.");
+            } else {
+                if (withdraw >= 50000) {
+                    ;
+                    document.write("큰 금액을 출력했습니다. 신중히 생각하세요.");
+                } else {
+                    document.write("작은금액을 출금했습니다.");
+                }
+                balance = balance - withdraw;
+                document.write("잔액 : " + balance);
+
+
+
+            }
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

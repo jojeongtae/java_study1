@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            // let dan;
+            // let num;
+            // for(dan =2 ; dan <=9 ; dan++){
+            //     document.write(dan+"단 ");
+            //     for(num = 1 ; num <= 9 ; num++){
+            //         if(num ==5)continue;
+            //         document.write(dan+ "X"+ num + "=" +dan*num + " ");
+            //     }
+            //     document.write("<hr>");
+            // }
+            let num =0; 
+            let num2 = parseInt(prompt("숫자"));
+            let evennum = 0;
+            let oddnum = 0;
+            for(num =1 ; num <= num2 ; num++){
+                if(num % 2 === 0){
+                    evennum += num
+                }else{
+                    oddnum += num
+                }
+            }
+            document.write(oddnum + "합 홀수<br>");
+            document.write(evennum + "합 짝수");
+
+
+
+
+
+
+        </script>
+
+
+
+</body>
+</html>

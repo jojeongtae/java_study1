@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    prompt를 쓰면 입력하는 칸이 나오는데 이거는 문자열로 생성이된다
+    하지만 parseInt를 쓰면 기존 문자열이 나오는 칸을 정수로 전환해준다
+    parseFloat는 문자열을 실수로 바꾼다
+    -->
+    <script>
+        let a = parseInt(prompt("숫자 써"))
+        let b = parseInt(prompt("될라나"));
+        document.write("더하기: " + (a+b) + "<hr>");
+        document.write("빼기: " + (a-b) + "<hr>");
+        document.write("고바기: " + (a*b) + "<hr>");
+        document.write("내누기: " + (a/b) + "<hr>");
+        document.write("나머지: " + (a%b) + "<hr>");
+        document.write("지수: " + (a**b) + "<hr>");
+
+
+    </script>
+
+</body>
+
+</html>

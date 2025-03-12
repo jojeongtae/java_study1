@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+     <script>
+        // function makefood(num) {
+        //     if (num >= 1 && num <= 3) {
+        //         document.write("<img src=../img/food" + num + ".png>");
+        //         document.write("<hr>맛잇게 드쇼");
+                
+        //     } else {
+        //         document.write("저희 매장에서는 없습니다.")
+
+        //     }
+        // }
+        // const food = parseInt(prompt("햄부거=1 피자=2 감튀=3"));
+        // makefood(food);
+
+
+        다른방식
+
+        function make(food){
+            let result = document.write("<img src=../img/food" + food + ".png>");
+            return result;
+        }
+        
+        const food = parseInt(prompt("햄부거=1 피자=2 감튀=3"));
+        
+        if(food < 1 || food > 3){
+            document.write("저희 매장에서는 없습니다.")
+        }else{
+            const result = make(food);
+            // document.write(result);
+            document.write("<hr>맛잇게 드쇼");
+        }
+  
+  
+  
+  
+  </script>
+
+
+
+</body>
+
+</html>

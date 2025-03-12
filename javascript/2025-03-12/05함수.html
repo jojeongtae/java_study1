@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // function num1(age, menber) {
+        //     let discount2 = 1;
+
+        //         if (age <= 13) {
+        //             discount2 = discount2 * 0.5;
+        //         }
+        //         if (menber === "예") {
+        //             discount2 = discount2 * 0.9;
+        //         }
+        //         return discount2;  
+
+        // }
+
+        // const ticket = 20000;
+        // let age = parseInt(prompt("나이를 적어주세요"));
+        // let menber = prompt("멤버쉽 보유 예/아니요");
+
+        // let discount;
+        // if (age < 0 || !(menber === "예" || menber === "아니요")) {
+        //     document.write("잘못된 수식입니다");
+
+        // } else {
+        //     discount = ticket * num1(age, menber);
+        //     let price =Math.floor((1-num1(age,menber))*100);
+
+        //     document.write("최종금액은 " + discount + "원 입니다.");
+        //     document.write("할인율은 " + price+ "% 입니다.")
+        // }
+
+
+        function getPrice(age, isMember) {
+            let ticket = 20000;
+
+
+            if (age <= 13) {
+                ticket = ticket * 0.5;
+            }
+            if (age >= 60) {
+                ticket = ticket * 0.7;
+            }
+            if (menber === "예") {
+                ticket = ticket * 0.9;
+            }
+            return ticket;
+        }
+
+
+        while(true){
+        let age = parseInt(prompt("나이를 적어주세요"));
+        let isMember = prompt("멤버쉽 보유 예/아니요");
+        
+        if (age < 0 || !(isMember === "예" || isMember === "아니요")) {
+            document.write("잘못된 수식입니다");
+            continue;
+        }
+
+            let price = getPrice(age, isMember);
+            document.write("최종금액은 " + price + "원 입니다.");
+            break;
+        
+    }
+
+    </script>
+
+
+
+</body>
+
+</html>
