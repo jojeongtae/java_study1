@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function num(asd) {
+            let final = 0;
+            if (chapter === 1) {
+                final = math + math2;
+            } else if (chapter === 2) {
+                final = math - math2;
+            } else if (chapter === 3) {
+                final = math * math2;
+            } else {
+                final = math / math2;
+            }
+            return final;
+        }
+
+        let chapter = 0;
+        let math = 0;
+        let math2 = 0;
+
+        while (true) {
+            chapter = parseInt(prompt("연산을 선택해주세요 1.덧셈/2.뺄셈/3.곱셈/4.나눗셈"));
+            if (chapter < 1 || chapter > 4) {
+                confirm("잘못 입력 하셨습니다.");
+                continue;
+            }
+            break;
+        }
+        while (true) {
+            math = parseInt(prompt("첫번째 숫자를 입력해주세요"));
+            if (isNaN(math)) {
+                continue;
+            }
+            break;
+        }
+        while (true) {
+
+            math2 = parseInt(prompt("두번째 숫자를 입력해주세요"));
+            if (isNaN(math2)) {
+                continue;
+            }
+            break;
+
+        }
+
+        final = num(chapter, math, math2);
+        document.write("연산 결과값: " + final + "입니다.");
+    </script>
+</body>
+
+</html>

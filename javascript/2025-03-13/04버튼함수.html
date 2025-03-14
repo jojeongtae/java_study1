@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+음식 한개당 1200원입니다. 얼마낼래?<hr>
+<input type="text" id="input">
+<button onclick="randomFood()">돈내는곳</button>
+<script>
+    function randomFood(){
+        const money = parseInt(document.getElementById('input').value);
+        const fnum = Math.floor(money/1200);
+        const change = money -(fnum * 1200);
+        if(money>=1200){
+            for(let i =1; i <= fnum ;i++){
+                let food = Math.floor(Math.random()*3 )+ 1;
+                document.write(i+"<img src=../../img/food"+ food +".png >");
+            }
+            document.write("<h3>합:" + fnum*1200 + " 잔돈:" + change)   
+        }else{
+            document.write("금액이 모자랍니다.")
+        }
+    }
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

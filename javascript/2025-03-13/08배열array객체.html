@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        // let arr = [];
+        // arr[0] = 23;
+        // arr[1] = 12;
+        // arr[2] = 34;
+        // for(let i = 0 ; i <3 ; i++){
+        //     document.write(`arr[${i}]=${arr[i]}`);
+        // }
+
+        //prompt 숫자 입력받기
+        //이후 -1입력되면 종료
+        //입력받은 숫자의 합계와 종료를 출력
+
+        //            내가한거
+        // let arr = [];
+        // let sum = 0;
+        // let count = 0;
+
+        // while (true) {
+        //    let asd = parseInt(prompt("숫자를 입력하세요"));
+        //     if(isNaN(asd)){
+        //         continue;
+        //     }
+        //     if(asd === -1){
+        //         break;
+        //     }                  
+        //     arr[count] = asd;
+        //     count++;
+        // }
+
+        // for(let i =0 ; i < arr.length ; i++){
+        //     sum += arr[i];
+        //     document.write(`숫자= ${arr[i]} <br>`)
+        // }
+        // document.write("합계 = " + sum);
+        // document.write("통계 = " + sum/count);
+
+
+
+        // length는 배열의 길이임 잊지말고 기억좀
+
+
+        // 강사님이 한거
+
+
+        function inputData() {
+            let arr = [];
+            let index = 0;
+            while (true) {
+                let num = parseInt(prompt("숫자를 입력하세요"));
+                if (isNaN(num)) {
+                    alert("숫자를 입력하세요");
+                    continue;
+                }
+                if (num === -1) {
+                    break;
+                }
+                arr[index] = num;
+                index++;
+            }
+            return arr;
+            //arr을 리턴하지않으면 지역변수기 때문에 값이 초기화된다.
+        }
+
+        function addData(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]; // num;
+            }
+            return sum;
+            // 얘도 마찬가지로 지역변수라 값이 사라지기때문에 sum리턴해야댐
+        }
+        function printData(arr) {
+            document.write("<br>ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ<br>")
+            for (let i = 0; i < arr.length; i++) {
+                document.write(arr[i] + " ");
+
+            }
+            document.write("<br>ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ<br>")
+            //위 함수는 결과값을 돌려줄게 없어서 리턴x
+        }
+        let numArr = inputData();
+        let total = addData(numArr);
+
+
+
+        let avg = total / numArr.length;
+        printData(numArr); 
+
+        document.write("<br>합계: " + total);
+        document.write("<br>평균 : " + avg);
+    </script>
+
+
+</body>
+
+</html>

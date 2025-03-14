@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //함수의 정의는 기본적으로 자바스크립트가 파일 전역을 훑어서 스캔해서
+     //밑에서 정의된 함수도 위로 끌어 올려서 실행이 된다.
+     //근데 이름없는 함수나 화살표 함수는 위에서 정의를 하지 않으면 실행이 안된다.
+     //그리고 화살표 함수를 쓰면 그냥 return 써주자
+
+    let a = 3 , b =4;
+    let sum = (num1,num2) => num1 + num2;
+    
+        document.write(a + "+" + b + "=" + sum(a,b));
+
+
+
+
+    </script>
+
+</body>
+</html>

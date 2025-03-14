@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        //입력받은 숫자를 저장 -1 입력하면 종료
+        //그리고 그것을 평균과 합계를 낸다
+        //입력받은 숫자가 무엇인지 표기
+        function arrData() {
+            let arr = [];
+            
+            // let count = 0;
+            while (true) {
+               let num = parseInt(prompt("숫자를 입력하세요"));
+                if (isNaN(num)) {
+                    continue;
+                }
+                if (num === -1) {
+                    break;
+                }
+                // arr[count] = num;
+                // count++;
+                arr.push(num);
+            }
+            return arr;
+        }
+
+        function mathData(arr) { //여기arr도 다른이름 써도됨어차피 밑에서 호출함
+            let sum = 0;
+            for (i = 0; i < arr.length; i++) {
+                  sum += arr[i];
+            }
+            return sum;
+        }
+        function textData(arr){ // 여기 arr은 그냥 밑에 length랑 출력을위해 arr이라 썻을뿐 안들어가도됨 밑에서 이미 asd가 들어감
+            for(i = 0; i<arr.length ; i++){
+            document.write(`숫자 =  ${arr[i]} <br>`);
+            }
+        }
+
+        let asd = arrData();
+        let totalSum = mathData(asd);
+        textData(asd);
+        let avg = totalSum / asd.length;
+
+        document.write("합계 = " + totalSum + "<br>");
+        
+        document.write("평균 = " + avg);
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

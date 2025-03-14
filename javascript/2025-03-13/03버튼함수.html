@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!--
+     html 모든 가지뻗기 구조를 DOM개체라한다
+    -->
+    <h1 id="alter">change colors</h1>
+    <button onclick="change('red')">red</button>
+    <button onclick="change('blue')">blue</button>
+    <button onclick="change('yellow')">yellow</button>
+    <button onclick="change('green')">green</button>
+
+
+
+    <script>
+        function change(colors) {
+            const alter = document.getElementById("alter");
+            alter.style.backgroundColor = colors;
+            //변수.속성.변환할거 = 변환내용
+            //document.getElementById("alter") 여기서 alter자리에
+            //change(colors) 버튼안에 들어갈말을 넣어준다.
+            //따라서 위에 버튼을 누르면 change('색상') 이 
+            //document.getElementById("alter"); 여기 alter 자리에 들어가면서
+            //색상이 바뀐다.
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -12,16 +12,6 @@
         function money(foodchk, time) {
             let price = 0;
             let timePrice = 1;
-            if (foodchk === "비빔밥" || foodchk === "짜장면" || foodchk === "돈까스") {
-                if (foodchk === "비빔밥") {
-                    price = 8000;
-                } else if (foodchk === "짜장면") {
-                    price = 6000;
-                } else if (foodchk === "돈까스") {
-                    price = 10000;
-                }
-            }
-
             if (time >= 0 || time < 24) {
 
                 if (time >= 11 && time <= 14) {
@@ -32,25 +22,44 @@
                 }
 
             }
+
+            while (true) {
+                if (foodchk === 1 || foodchk === 2 || foodchk === 3 || foodchk === 4) {
+                    if (foodchk === 1) {
+                        price = 8000;
+                        continue;
+                    } else if (foodchk === 2) {
+                        price = 6000;
+                        continue;
+                    } else if (foodchk === 3) {
+                        price = 10000;
+                        continue;
+                    }
+                    
+                    
+                }else if(foodchk === 4){
+                    break;
+                }
+
+            }
             let totalPrice = price * timePrice
             return totalPrice;
-
         }
 
         // 점심 메뉴 3개 비빔밥 짜장면 돈까스
         // 점심 시간 11 - 14 저녁시간 18 - 21
         // 런지 10% 디너 20%
 
-        let food1 = 8000;
-        let food2 = 6000;
-        let food3 = 10000;
+        // let food1 = 8000; 비빔
+        // let food2 = 6000; 짜장
+        // let food3 = 10000;   돈
 
 
         while (true) {
-            let foodchk = prompt("음식을 정해주세요 비빔밥/짜장면/돈까스");
             let time = parseInt(prompt("식사하실 시간을 정해주세요"));
+            let foodchk = parseInt(prompt("음식을 정해주세요 1-비빔밥/2-짜장면/3-돈까스/4-종료"));
 
-            if (!(foodchk === "비빔밥" || foodchk === "짜장면" || foodchk === "돈까스")) {
+            if (!(foodchk === 1 || foodchk === 2 || foodchk === 3 || foodchk ===4)) {
                 confirm("없는 메뉴입니다.");
                 continue;
             }

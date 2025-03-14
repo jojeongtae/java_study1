@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+    버튼온 클릭에 텍스트 변경 색변경
+    -->
+    
+    <input type="text" id="textBox" >
+    <button onclick="change('blue')">버튼</button>
+    
+    <hr>
+    <h1 id="h1_text" style="background-color: antiquewhite;"></h1>
+
+    <script>
+        function change() {
+            const textBox = document.getElementById('textBox'); //input객체 가져옴
+            const h1_text= document.getElementById('h1_text');  //h1객체가져옴
+            // let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16); //색상 랜덤 16진수최대치를 16진수로 바꿔주는거같음
+            h1_text.style.color = 'blue';
+            h1_text.innerText= textBox.value;
+            // h1_text.style.color = randomColor;
+        }   
+        //엔터누르면 입력
+        //맨밑에 밸류 빈칸은 엔터 한번더누르면 사라짐
+        //아직 때가 아님
+        const enter = document.getElementById('textBox');
+        textBox.addEventListener('keydown',function(event){
+            if(event.key === 'Enter'){
+                change();
+                enter.value= "";
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1사과 2 우유 3 계란 4 라면 5 고기 6 생수 7 휴지 8 커피
+        // 할인 10만원이상 5% 만하면됨
+
+
+        //시간은 오전 10시에서 16시 미만으로 5%할인  그리고 16시 부터 22시 미만까지 3퍼할인
+        function timesale() {
+            let timeprice = 0;
+            let time = parseInt(prompt("현재 시간을 써주세요(0~23)"));
+            if (time > 23 || time < 0) {
+                document.write("잘못된 시간")
+            } else {
+                if (time >= 10 || time < 16) {
+                    timeprice *= 0.05;
+
+                } else if (time >= 16 || time < 22)
+                    timeprice *= 0.03;
+            }
+            return timeprice;
+        }
+
+        // 이건 물건 갯수가 8개까지있으니 8번반복시킨것
+        for (let i = 1; i < 9; i++) {
+            let frult = parseInt(prompt("구매할 물건의 번호를 입력하세요"));
+            if (frult < 0 || frult > 9) {
+                document.write("번호 잘못됨")
+                continue;
+            } else {
+                switch (frult) {
+                    case 1:
+                        price = 3000;
+                    case 2:
+                        price = 2500;
+                    case 3:
+                        price = 5500;
+                    case 4:
+                        price = 4000;
+                    case 5:
+                        price = 15000;
+                    case 6:
+                        price = 1000;
+                    case 7:
+                        price = 8000;
+                    case 8:
+                        price = 6500;
+                }
+            }
+            return frult;
+        }
+
+        //그리고 단일 갯수가 5개 이상 10개 미만일때 5%할인 그리고 10개 이상구매시 10퍼할인
+
+        function frultNum() {
+            let frultprice = 0;
+            let buyNum = parseInt(prompt("해당물건의 개수를 입력하세요"));
+            if (buyNum < 0) {
+                document.write("잘못된 갯수")
+            } else {
+                if (buyNum >= 5 || buyNum < 10) {
+                    frultprice *= 0.05;
+                }
+                if (buyNum >= 10) {
+                    frultprice * 0.1;
+                }
+            }
+            return frultprice;
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = [];
+        // for (i = 0; i < 10; i++) {
+        //     arr[i] = Math.floor(Math.random() * 101);
+
+        // }
+        // document.write(arr);
+
+        // //내가한거
+        // let arr = [];
+        // for(i = 0 ; i < 10 ; i++){
+        //     let random = Math.floor(Math.random()*101);
+        //     arr.push(random);
+
+        // }
+
+
+        // let mapArr = arr.map((asd)=>{
+        //     if(asd >= 60){
+        //         document.write("합격/")
+        //     }else {
+        //         document.write("불합격/")
+        //     }
+        // });
+
+
+        //강사님이한거
+
+        let scoreArr = [];
+
+        for (i = 0; i < 10; i++) {
+            let score = Math.floor(Math.random() * 101);
+            scoreArr.push(score);
+        }
+        let sortArr = scoreArr.sort((a,b)=>a-b);
+        document.write(sortArr)
+
+
+
+
+        // let resultArr = scoreArr.map((e) => {
+        //     if (e >= 60) {
+        //         return "합격";
+        //     } else {
+        //         return "불합격";
+        //     }
+        // });
+
+        // let plusArr = scoreArr.filter((e) => e >= 60);
+       
+        // // document.write(plusArr.join(" "+" "));
+                
+        // let grade = plusArr.map((o) => {
+        //     let result;
+
+        //     switch (Math.floor(o / 10)) {
+        //         case 10:
+        //         case 9:
+        //             result = "A등급입니다";
+        //             break;
+        //         case 8:
+        //             result = "B등급입니다";
+        //             break;
+        //         case 7:
+        //             result = "C등급입니다";
+        //             break;
+        //         case 6:
+        //             result = "D등급입니다";
+        //             break;
+
+
+        //     }
+        //     return result;
+        // });
+        // for(let i = 0 ; i<scoreArr.length ; i++){
+        //     document.write("<br>"+ "점수: " + scoreArr[i]+"결과: "+ resultArr[i]+"등급은" +grade[i])
+        // }
+        
+ 
+    </script>
+</body>
+
+</html>

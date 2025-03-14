@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+<script>
+// document.write() < document 객체의 write 메서드
+// style.color = "red" style 객체 color속성을 red로 변경한다
+//html에서 최상위 객체는 window
+//예를 들어 많이썻던 parseInt() 같은거는 앞에 window. 이 생략이 된거다.
+// isNaN은 숫자는 false고 숫자로 변환할수 있는 상황이면 ture다.
+
+
+const jud = window.confirm("confirm()에서 window가 생략된 것을 이해했나요?");
+document.write("전역 객체 속성 이해 했음:" + jud + "<br>");
+document.write("isNaN(1)= "+ isNaN(1)+"<br>");
+document.write("isNaN(0.5)=" + isNaN(0.5)+"<br>");
+document.write("isNaN(str)= " +isNaN('str')+"<br>");
+document.write("eval(3*4)= " + eval(3*4));
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

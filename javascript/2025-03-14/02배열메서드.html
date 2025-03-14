@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr = [10,30,4,3,-2,-3,25];
+        // let filterArr =arr.filter((q) =>q <0);
+        // function test(q){
+        //     return q < 0;
+        // }
+        // // arr.filter(test); // [-2,-3] 조건식이 음수보다 작냐기 때문에 -2,-3만 나옴
+        // document.write(filterArr);
+
+
+
+
+
+        // 기존 배열에서 음수만 걸러서 출력방법
+        // let filterArr = [];
+        // let asd = 0;
+        // for(let i=0 ; i <arr.length ; i++){
+        //     if(arr[i] < 0){
+        //         filterArr[asd] = arr[i];
+        //         asd++
+        //     }
+         
+        // }   
+        // document.write(filterArr)
+        
+        
+        //빈 배열과 인덱스를 하나 만들어주고 조건식을 걸어서 빈배열에만 넣어주고
+        //빈 인덱스를 하나씩 증가 시켜주면 순서가 완성이 된다
+
+        // let mapArr = arr.map((e)=>{
+        // let result;
+        //     if(e % 2 ===0){
+        //         result = e+ 10;
+        //     }else{
+        //         result = e+ 20;
+        //     }
+        //     return result;
+        // }); // [20, 40 ,14 ,23, 8 ,17,45]
+
+        //map은 filter와 비슷하지만 필터는 걸러지지만 map은 버리지는않고
+        //정해진 값은 가져온다 필터는 선택 맵은 기존에서 변화
+        // document.write(mapArr);
+        let arr = [10,30,4,3,-2,-3,25];
+        let mapArr =[];
+        for(i= 0 ; i <arr.length ; i++){
+            if(arr[i] % 2 ===0){
+                mapArr[i] = arr[i]+10;
+            }else{
+                mapArr[i] = arr[i]+20;
+            }
+            
+
+        }
+        document.write(mapArr);
+
+
+
+
+    </script>
+</body>
+</html>
