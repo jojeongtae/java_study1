@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<input type="radio" name="colors" value="red">red<br>
+<input type="radio" name="colors" value="green">green<br>
+<input type="radio" name="colors" value="blue">blue<br>
+<input type="button" value="choice" onclick="radiobut()">
+<h2 id="result"></h2>
+    <script>
+        // function radiobut(){
+        //     const rdocheck = document.querySelectorAll("[type='radio']");
+        //     for(let i =0 ; i<rdocheck.length ; i++){
+        //         if(rdocheck[i].checked){
+        //             document.getElementById("result").innerText =`${rdocheck[i].value}`
+        //         }
+        //     }
+        // }
+    
+        function radiobut(){
+            const rdocheck = document.querySelectorAll("[type='radio']");
+            for(let i =0 ; i<rdocheck.length ;i++){
+                if(rdocheck[i].checked){
+                    document.getElementById("result").innerText = `${rdocheck[i].value}`
+                break;
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

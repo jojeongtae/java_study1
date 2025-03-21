@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" name="addShop" id="check1" value="9900" onclick="shopList()">
+    <label for="check1">제주 당근</label><br>
+    <input type="checkbox" name="addShop" id="check2" value="12910" onclick="shopList()">
+    <label for="check2">국산 옥수수차</label><br>
+    <input type="checkbox" name="addShop" id="check3" value="13800" onclick="shopList()">
+    <label for="check3">샐러드</label><br>
+    <input type="checkbox" name="addShop" id="check4" value="21500" onclick="shopList()">
+    <label for="check4">벌꿀</label><br>
+    <input type="checkbox" name="addShop" id="check5" value="4990" onclick="shopList()">
+    <label for="check5">다용도 쿠션</label><br>
+    <input type="checkbox" name="addShop" id="check6" value="9800" onclick="shopList()">
+    <label for="check6">코털제거기</label><br>
+    <input type="checkbox" name="addShop" id="check7" value="99000" onclick="shopList()">
+    <label for="check7">신발</label><br>
+    <input type="checkbox" name="addShop" id="check8" value="17120" onclick="shopList()">
+    <label for="check8">싸구려가방</label><br>
+    <input type="checkbox" name="addShop" id="check9" value="298800" onclick="shopList()">
+    <label for="check9">에어팟프로3</label><br>
+    <input type="checkbox" name="addShop" id="check10" value="19500" onclick="shopList()">
+    <label for="check10">헤드셋</label><br>
+
+    <p id="result"></p>
+    <input type="button" onclick="resetAll()" value="초기화 버튼"
+    style=" width: 500px; height: 50px;">
+
+    <script>
+        window.onload = resetAll;
+
+
+
+        function shopList(){
+        let sum = 0;
+        const adds = document.getElementsByName("addShop");
+        for(let i =0 ; i<adds.length ;i++){
+            if(adds[i].checked){
+                sum += Number(adds[i].value);
+            }
+        }
+        document.getElementById("result").innerText = `추가금액 ${sum}원`;
+
+        }
+
+
+        function resetAll(){
+            let sum = 0;
+            const adds = document.getElementsByName("addShop");
+
+            for(let add of adds){
+                if(add.checked){
+                    add.checked = false;
+                }
+            }
+            document.getElementById("result").innerText = `추가금액 ${sum}원`
+        }
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <img id="image" src="" height="300px"><br>
+    <input type="button" value="change" onclick="changeImage()">
+
+    <script>
+        const imgFile = [
+            '../../img/photo1.jpg',
+            '../../img/photo2.jpg',
+            '../../img/photo3.jpg',
+            '../../img/photo4.jpg',
+            '../../img/photo5.jpg'
+        ];
+        function changeImage() {
+            const random = imgFile[Math.floor(Math.random() * imgFile.length)];
+            document.getElementById("image").src = random;
+            
+            
+            
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품목록</title>
+</head>
+<style>
+    .prduct-container{ display: flex; gap:20px};
+    .prduct-card{
+        border: 1px solid #ddd;
+        padding:10px;
+        width:150px;
+        text-align: center;
+        border-radius:5px;
+    }
+</style>
+<body>
+    <a href="../../img/photo1.jpg"></a>
+<h2>제품목록</h2>
+<div class="prduct-container" id="prductContainer"></div>
+<script>
+    const products =[
+        {name: "진화 전", price: 8000000, image: "../../img/photo4.jpg"},
+        {name: "진화 후", price:6000000, image: "../../img/photo3.jpg"},
+        {name: "각성", price:15000000, image: "../../img/photo5.jpg"}
+    ];
+
+    const container = document.getElementById("prductContainer");
+    products.forEach((product)=>{
+        const card = document.createElement('div');
+        card.className = product-card;
+        card.innerHTML =`
+        <img src="${product.image}" width = "200px" height="200px">
+        <h3>${product.name}</h3>
+        <p>전투력: ${product.price.toLocaleString()}만</p>
+        `;
+        container.appendChild(card);
+    });
+
+    //위아래 똑같음
+
+    // for(let product of products){
+    //     const card = document.createElement('div');
+    //     card.className = product-card;
+    //     card.innerHTML =`
+    //     <img src="${product.image}" width = "200px" height="200px">
+    //     <h3>${product.name}</h3>
+    //     <p>전투력: ${product.price.toLocaleString()}만</p>
+    //     `;
+    //     container.appendChild(card);
+    // }
+</script>
+</body>
+</html>

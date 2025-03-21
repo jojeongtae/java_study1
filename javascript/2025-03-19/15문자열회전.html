@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#rotate{
+    display: none;
+    font-size: 40px;
+    color: blue;
+}
+    #container:hover > #rotate{
+        display: inline-block;
+        
+    }
+    div{
+        width: 100%;
+        height: 200px;
+    }
+</style>
+<body>
+    <div id="container">
+<h1 id="rotate">(°ロ°)(°ロ°)(°ロ°)(°ロ°)(°ロ°)(°ロ°)(°ロ°)</h1>
+</div>
+
+
+<script>
+    const rotate = document.getElementById("rotate");
+    function rotateString(){
+        const text = rotate.textContent;
+        const firstChar = text[0];
+        const rotatedText = text.slice(1)+firstChar;
+        rotate.textContent=rotatedText;
+        console.log(rotatedText)
+    }
+    setInterval(rotateString,20);
+    </script>
+
+
+</body>
+
+</html>

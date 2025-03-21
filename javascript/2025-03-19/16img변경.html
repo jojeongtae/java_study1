@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+<img id="image" src="../../img/photo1.jpg" height="300px"><br>
+<input type="button" value="change" onclick="changeImage()">
+
+<script>
+let toggle = true;
+function changeImage(){
+    if(toggle){
+        document.getElementById("image").src = "../../img/photo2.jpg";
+    }else{
+        document.getElementById("image").src = "../../img/photo1.jpg";
+        toggle = !toggle;
+    }
+}
+    </script>
+
+
+</body>
+
+</html>

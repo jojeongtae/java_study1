@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>직원목록</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <h1>직원 목록</h1>
+    <input type="text" name="namebox" id="namebox1">
+    <ul id="main" name="main1">
+
+    </ul>
+
+    <script>
+        //input 이벤트가 발생할때마다 이름중에 있는지 확인
+        //한글자만 쳐도 그 이름 포함된게 전부나옴
+        // let names="aaa bbb cac ddd";
+        // const nameSplit = names.split(" ");
+        // let fil=nameSplit.filter((name)=>name.includes('d')) //true false 리턴 '' a가 포함된 값을 필터하고 리턴;
+        // console.log(fil);
+
+        const players = [
+            { name: "오지환", position: "유격수" },
+            { name: "김현수", position: "좌익수" },
+            { name: "홍창기", position: "우익수" },
+            { name: "박해민", position: "중견수" },
+            { name: "문보경", position: "3루수" },
+            { name: "오스틴", position: "1루수" },
+            { name: "신민재", position: "2루수" },
+            { name: "손주영", position: "투수" },
+            { name: "박동원", position: "포수" }
+        ];
+        const ul = document.getElementById("main");
+        for (let s of players) {
+            let li = document.createElement('li');
+            li.innerText = `${s.name} ${s.position}`;
+            ul.appendChild(li);
+        }
+
+
+        document.getElementById('namebox1').addEventListener('input', (e) => {
+            let textvalue = e.target.value;
+            ul.innerHTML = "";
+            let nameFilter = players.filter((a) => a.name.includes(textvalue));
+
+            for (let s of nameFilter) {
+                let li = document.createElement('li');
+                li.innerText = `${s.name} ${s.position}`;
+                ul.appendChild(li);
+            }
+
+
+
+
+
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

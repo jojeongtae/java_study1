@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <img src="../../img/africa.jpg" id="img" style="height: 500px; width: 500px;">
+       <br>
+        <input type="button" onclick="backImage()" id="back_but" value="이전">
+        <input type="button" onclick="frontImage()" id="next_but" value="다음">
+    </div>
+    <script>
+        const imgFile = [
+            "../../img/africa.jpg",
+            "../../img/africa1.jpg",
+            "../../img/africa2.jpg",
+            "../../img/africa3.jpg"
+        ];
+        let num = 0;
+        function frontImage(){
+            if(num < imgFile.length-1){               
+                num++;
+            }else{
+                num = 0;                
+            }
+            document.getElementById('img').src = imgFile[num];
+        }
+
+        function backImage(){ 
+            if(num == 0){
+                num = imgFile.length-1;
+            }else{
+                num--;
+            }
+
+            document.getElementById('img').src = imgFile[num];
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

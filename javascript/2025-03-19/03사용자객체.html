@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+
+    // 사용자 객체는 this < 함수내에서 불러오려면 붙혀줘야된다.
+    let person = {
+        name: "cho",
+        age: 23,
+        intro(){
+            document.write("My name: " + this.name+", age: "+ this.age + "<br>");
+        }
+    };
+    person.intro();
+    person.age = 30;
+    person.intro();
+    person.name = "kim";
+    person.intro();
+    person.job = "teacher";
+    person.intro = function(){
+        document.write("My name: " +this.name + ", age: " + this.age + ", 직업: " + this.job)
+    };
+
+</script>
+
+
+</body>
+</html>

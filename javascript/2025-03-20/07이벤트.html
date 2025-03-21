@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+    #rotateImage{
+        transition:transform 1s;}
+</style>
+<body>
+
+    <h4>이미지를 클릭해보세요</h4><hr>
+    <img id="rotateImage" src="../../img/photo1.jpg">
+    <script>
+// scale(0,0) 이거는 비율같게줄어듬
+// scale(1,1)이거는 비율같게 늘어남
+        let image = document.getElementById('rotateImage');
+        image.addEventListener("mouseover", function(){
+            this.style.transform = "scale(0,0)";
+        });
+        image.addEventListener("mouseout",function(){
+            this.style.transform = "scale(1,1)";
+        });
+
+
+        // 화살표함수는 this로 못쓰고 변수이름을 써줘야한다.
+        // event.target.style.transform = "scale(0,0)"; 
+        // 이렇게하면 화살표함수로 쓸수있다.
+        // let image = document.getElementById('rotateImage');
+        // image.addEventListener("mouseover",()=>{
+        //     image.style.transform = "scale(0,0)";
+        // });
+        // image.addEventListener("mouseout",()=>{
+        //     image.style.transform = "scale(1,1)";
+        // });
+
+
+
+    </script>
+</body>
+</html>

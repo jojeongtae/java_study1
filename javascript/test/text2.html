@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="main"></h2>
+    <input type="button" value="광클" onclick="space()" id="but">
+
+    <script>
+        function space() {
+            const numArr = [];
+            document.getElementById("but");
+            for (let i = 0; i < 6; i++) {
+                let num = Math.floor(Math.random() * 46);
+                numArr.push(num);
+            }
+            document.getElementById("main").innerText = numArr.join(" ")
+            
+        
+
+        }
+
+
+    </script>
+</body>
+
+</html>

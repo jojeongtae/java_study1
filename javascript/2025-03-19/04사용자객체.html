@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const student = {
+            id: "20253010001",
+            name: "오지환",
+            scores: [],
+
+            //밑에 함수에 넣어준값이 빈 배열로 들어간다.
+            // [{subject:"javaScript", score:85},
+            // {subject:"javaScript", score:85},
+            //{subject:"javaScript", score:85},
+            // {subject:"javaScript", score:85}];
+            addScore(score) {
+                this.scores.push(score);
+                console.log(`${score.subject}${score.score}점 입력`);
+            },
+            getTotal() {
+                let sum = 0;
+                for (let s of this.scores) {
+                    sum += s.score;
+                }
+                // for(let i = 0 ; i<this.score.length ;i++)
+                //     sum += this.scores[i].score         //이방법은 너무길어짐 위방식 선호
+                return sum;
+            },
+            getAverage() {
+                let sum = this.getTotal();
+                let avg = sum / this.scores.length;
+                return avg;
+            }
+
+        }
+
+        student.addScore({ subject: "javaScript", score: 85 });
+        student.addScore({ subject: "HTML", score: 95 });
+        student.addScore({ subject: "Css", score: 75 });
+        student.addScore({ subject: "java", score: 88 });
+
+        document.write(student.getTotal() + "<br>")
+        document.write(student.getAverage())
+
+    </script>
+
+
+</body>
+
+</html>

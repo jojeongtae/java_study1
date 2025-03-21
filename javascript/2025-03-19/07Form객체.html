@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myform">
+        ID<input type="text" name="userId"><br>
+        Password<input type="password" name="passwd"><br>
+        <input type="submit" value="log in" onclick="getInput()">
+    </form>
+    <script>
+        function getInput() {
+            const id = document.myform.userId;
+            const pw = document.myform.passwd;
+            if (pw.value.length <= 4) {
+                alert(`${id.value}님 패스워드가 짧습니다`);
+            } else {
+                alert(`${id.value}님 환영합니다`);
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

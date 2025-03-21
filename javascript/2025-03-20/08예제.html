@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+
+
+    <form name="mymain">
+        <label for="textbox">이름:</label>
+        <input type="text" name="text_name" id="textbox">
+
+        <input type="checkbox" id="check">
+        <label for="check">약관의 동의하세요</label>
+
+        <input id="submit_but" type="submit" value="제출">
+    </form>
+
+    <p id="nametag"></p>
+    <p id="agreement"></p>
+
+    <script>
+        //event.preventDefault();
+
+
+        // document.mymain
+        document.mymain.addEventListener("submit", allSubmit);
+        function allSubmit() {
+            event.preventDefault();
+            document.getElementById('nametag').innerText =
+            `이름: ` + document.getElementById('textbox').value
+
+            // nametag.innerText = `이름: `+textbox.value;
+
+
+            if (check.checked) {
+                document.getElementById('agreement').innerText
+                    = `약관 동의: 약관에 동의됨`;
+            } else {
+                document.getElementById('agreement').innerText
+                    = `약관 동의: 약관에 동의안됨`;
+            }
+        }
+
+w
+
+
+
+    </script>
+</body>
+
+</html>

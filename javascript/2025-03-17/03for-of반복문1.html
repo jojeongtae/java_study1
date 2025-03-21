@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>문자열에서 단어 찾기</h1>
+    <textarea id="text_box"> </textarea>
+    <br>
+    <input type="text" id="text1">
+    <button onclick ="count_text()">단어 카운트</button>
+    <h2>결과</h2>
+    <h3 id="h3_count">aaaaa</h3>
+    <script>
+        //텍스트 박스에 입력되는 글자를 버튼으로 카운트
+        //글자를 넣었을때 반복되는 갯수를 밑에 표현
+        //upcase lowcase써서 대소문자 구분없애고 split써서 카운트
+        function count_text() {
+            let h3_count = document.getElementById('h3_count');
+            let text_box = document.getElementById('text_box').value.toLowerCase();
+            let text1 = document.getElementById('text1').value.toLowerCase();
+           
+            // let textLow = text_box.value.toLowerCase();
+            // let inputLow = text1.value.toLowerCase();
+            let textSplit = text_box.split(text1);
+
+            h3_count.innerText = textSplit.length-1;
+        
+        }
+        
+
+    </script>
+</body>
+
+</html>

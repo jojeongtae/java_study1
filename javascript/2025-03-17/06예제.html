@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h1>단어 첫 글자 대문자로 변환</h1>
+<textarea id="textbox"></textarea>
+<br>
+<button onclick="capitalizedWords()">변환</button>
+<h2>결과:</h2>
+<span id="result"></span>
+
+<script>
+    function capitalizedWords(){
+        const textbox = document.getElementById('textbox').value; //"aaa bbb ccc"
+        const result = document.getElementById('result');
+        const splitArr = textbox.split(" ");
+        //[aaa, bbb ,ccc]
+        let newArr =[]; // 기존 배열을 안망치려면 새 배열을 만들어서 하면된다
+        // 근데 기존배열을 망쳐도 상관없으면 밑에 방식으로 하면된다.
+        // splitArr[i]=splitArr[i].charAt(0).toUpperCase() + splitArr[i].slice(1) // "A"
+        
+        
+        //첫번재방법
+        for(let i = 0 ; i<splitArr.length ;i++ ){
+            newArr[i]=splitArr[i].charAt(0).toUpperCase() + splitArr[i].slice(1) // "A"
+            // splitArr[i][0] // 이거랑 위랑 똑같음touppercase만 붙이면
+
+        }
+
+
+        //2번째 방법
+        // splitArr.map((word)=>word.charAt(0).toUpperCase().WORD.SLICE(1)).join(" ");
+
+        //3번째 방법
+        // const joinStr =textbox.split(" ")
+        //                       .map((word)=>word.charAt(0).toUpperCase().WORD.SLICE(1))
+        //                       .join(" ");
+
+        result.innerText = newArr.join(" ");
+    }
+</script>
+
+
+
+</body>
+
+</html>

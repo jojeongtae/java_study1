@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>문자열 뒤집기</h1>
+    <br>
+    <input type="text" id="textinput">
+
+    <button onclick="reverse_text()">단어 카운트</button>
+    <h2>결과</h2>
+    <span id="result"></span>
+    <script>
+        function reverse_text() {
+            // const textinput = document.getElementById('textinput').value;
+            // const result = document.getElementById('result');
+
+            // let num = [];
+            // for(let i= textinput.length-1 ; i >= 0 ;i--){
+            //     num.push(textinput[i]);
+            // }
+            // result.innerText = num;
+
+
+
+            //강사님이 한거
+            const textinput = document.getElementById('textinput');
+
+            // let result = "";
+            // for(let i = textinput.length-1 ; i >=0 ;i--){
+            //     reult += textinput[i]
+            // }
+
+            let result = textinput.split("").reverse().join("");
+            const resultStr = document.getElementById('result');
+
+            resultStr.innnerText = result;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

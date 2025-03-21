@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>사용자 목록</h1>
+    <input type="submit" name="nameBut" id="but1" value="사용자 추가">
+    <ul id="main">
+    </ul>
+    <script>
+        let person = [
+            { name: "김철수", age: 25 },
+            { name: "이영희", age: 30 },
+            { name: "김준홍", age: 27 }
+        ];
+        let num = 0
+        document.getElementById("but1").addEventListener("click", (e) => {
+            let creatLi = document.createElement('li');
+            creatLi.innerText = `${person[num].name} (${person[num].age})세`;
+            document.getElementById('main').appendChild(creatLi);
+            num++;
+            if(num >= person.length){
+                document.getElementById("but1").disabled = true;
+                // e.target.disabled = true; 어차피 이 함수는 버튼 누를때 나오니까 e타겟으로 가능
+            }
+
+        });
+
+        //디져블 속성써서 버튼 비활성화 true면 비활성화
+    </script>
+</body>
+
+</html>

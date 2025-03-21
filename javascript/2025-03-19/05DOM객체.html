@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p class="elm">p class="elm" 1</p>
+    <p class="elm">p class="elm" 2</p>
+    <p>p & No class 1</p>
+    <script>
+        //이 모든건 DOM트리 구조
+        //모든요소(html,head,body,등등)들을 노드라고 칭한다
+        //노드 종류는 태그노드 속성노드 문자노드
+        //속성노드는 div style=... 이런게 속성노드
+        //DOM객체를 다룰땐 document. 이렇게 쓴다
+        //getElements < 뒤에 s가 붙으면 객체 여러개를 불러온다 이건 항상 배열로 리턴
+        //태그 선택자로도 접근할수있다.
+        //css에서  input[type = text] #id 등등 이런것 들을 다 넣을수 있다.
+        //모든 태그선택자들을 가져온다. document.querySelectorAll("??")
+        //?? 안에 태그선택자가 class면 .??? 아이디면 #???등등
+        //#id는 id선택자는 하나밖에 못쓰지만 그래도 배열을 리턴한다.
+        const elms= document.getElementsByClassName("elm");
+        for(let i= 0; i<elms.length ;i++){
+            document.write(`ByClassName: elms[${i}] = ${elms[i].innerText}<br>`);
+            document.write("<hr>")
+        }
+        const tags = document.getElementsByTagName("p");
+        for(let i = 0; i<tags.length;i++){
+            document.write(`ByTagName P: tags[${i}] = ${tags[i].innerText}<br>`);
+        }
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

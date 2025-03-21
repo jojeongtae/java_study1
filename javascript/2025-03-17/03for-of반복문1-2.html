@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h1>문자열에서 단어 찾기</h1>
+<textarea id="textbox" rows="4" cols="50"></textarea>
+<br>
+<input type="text" id="textinput">
+
+<button onclick="count_text()">단어 카운트</button>
+<h2>결과</h2>
+<span>최종 결과는:</span> <span id="result"></span>
+<script>
+    function count_text(){
+        // let textbox = 
+        // document.getElementById('textbox').value.toLowerCase();
+        // let textinput = 
+        // document.getElementById('textinput').value.toLowerCase();
+        // let result = 
+        // document.getElementById('result');
+        // let resultSplit = textbox.split(textinput);
+        // result.innerText = resultSplit.length-1;
+    
+        //강사님이한거
+        const textbox = document.getElementById('textbox').value.toLowerCase();
+        const textinput = document.getElementById('textinput').value.toLowerCase();
+    
+        const result1 = textbox.split(textinput);
+        const count = result1.length-1;
+        
+        
+        const result = document.getElementById('result');
+        result.innerText = "단어 출현 횟수 : "+ count;
+    
+    }
+</script>
+</body>
+
+</html>

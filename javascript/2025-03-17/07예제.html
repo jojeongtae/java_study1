@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h1>단어 마지막 글자 대문자로 변환</h1>
+<textarea id="textbox"></textarea>
+<br>
+<button onclick="change()">변환</button>
+<h2>결과:</h2>
+<span id="result"></span>
+
+<script>
+    function change(){
+        const textbox = document.getElementById('textbox').value;
+        const result = document.getElementById('result');
+
+        const lastArr = textbox.split(" ");
+        let newArr = [];
+        // for(let i = 0 ; i <lastArr.length ; i++){
+        //     newArr[i]= 
+        //     lastArr[i].slice(0,-1)+lastArr[i].charAt(lastArr.length-1).toUpperCase();
+        // }
+
+
+        // result.innerText =newArr.join(" ");  
+        for(i = 0 ; i<lastArr.length ;i++ ){
+        let arr1 = lastArr[i].slice(1);
+        let arr2 = lastArr[i].charAt(0).toUpperCase();
+        newArr[i] = arr2.concat(arr1);
+        }
+        result.innerText = newArr.join(" ");
+
+
+
+
+        }
+
+
+
+
+
+
+
+ 
+</script>
+
+
+
+</body>
+
+</html>

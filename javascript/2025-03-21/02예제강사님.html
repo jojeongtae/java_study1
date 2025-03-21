@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>로그인</h1>
+    <form name="mainForm">
+        <label for="name">아이디:</label>
+        <input type="text" name="userId" id="name"><br>
+        <label for="pw">비밀번호:</label>
+        <input type="password" name="userPw" id="pw"><br>
+        <input type="submit">
+    </form>
+    <script>
+        //배열로 아이디 비밀번호를 넣어놓고 그안에 있는지 없는지 체크
+        //아이디 비번 로그인 입력 틀리면 비번틀림 성공하면 로그인성공 ???님 출력
+        const userlist = [
+            { uid: "admin", upw: "1234" },
+            { uid: "asd123", upw: "1234" },
+            { uid: "qwe123", upw: "1234" },
+            { uid: "zxc123", upw: "1234" },
+            { uid: "asd159", upw: "0000" }
+        ];
+
+
+
+        document.mainForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const inputId = e.target.userId.value;
+            const inputPw = e.target.userPw.value;
+            // let flag = false;
+
+            // for (let u of userlist) {
+            //     if (u.uid === inputId) {
+            //         flag = true;
+            //         if (u.upw === inputPw) {
+            //             alert("로그인성공" + inputId + "님");
+            //         } else {
+            //             alert("비밀번호가 일치하지 않습니다.");
+            //         }
+            //         break;
+            //     }
+
+            // }
+            // if (flag === false) {
+            //     alert(`${inputId}는 없는ID입니다`)
+            // }
+
+
+            //다른방법들
+
+
+            // 첫번째 바로아래쪽들
+            //객체를 넣어놀곳은 null을 넣는다
+            // let user = null;
+            // forEach는 리턴을 하지않음 그리고 함수이기때문에 배열에 길이 전부를 살펴본다.
+            // userlist.forEach((u)=>{
+            //     if(u.uid ===inputId){
+            //         user = u;
+            //     }
+            // })
+
+
+            //2번째 바로아래 find는 첫번째로 조건에 맞는경우만 가져옴
+            //find는 배열을 리턴하는게 아닌 객체를 리턴함
+            let user = userlist.find((u)=>{u.id === inputId});
+
+
+            //find에서 못찾으면 undefind 값이 나오는데 이럴때 앞에 !붙여서 하면 null이랑 undefind둘다 포함된다. 
+            if(!user){
+                alert(`${inputId}는 없는ID입니다`);
+                return;
+            }
+            // 아이디가 없으면 이 함수는 더이상 의미가 없으므로 리턴
+
+
+            //하지만 null이 아니라 존재하면 비밀번호 확인
+            if(user.pw === inputPw){
+                  alert("로그인성공" + inputId + "님");
+
+            }else{
+                alert("비밀번호가 일치하지 않습니다.");
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

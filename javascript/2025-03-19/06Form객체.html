@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myform">
+        <input type="text" name="userId">
+    </form>
+    <script>
+    const id1= document.myform.userId;  //최상위 객체 document 안에 폼태그 네임 이랑
+    //그 안에 있는 자식요소 인풋을 가져올수 있다.
+    alert(`${id1.value}님 환영합니다`);
+
+
+
+</script>
+
+
+</body>
+
+</html>

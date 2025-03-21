@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+    #rotateImage{
+        transition:transform 1s;}
+</style>
+<body>
+<!-- 
+    서브밋 이벤트가 발생하면
+    기본기능이있는데 액션속성안에 url이 있으면전송하고
+    없으면 새로고침
+    리셋은 폼안에 있는태그를 초기화
+    체인지는 변경 
+    인풋체인지는 글자 하나 쓸대마다 체인지 이벤트가 발생
+    그안에 포커스가 빠져나가면 끝    
+
+-->
+
+    <h4>이미지를 클릭해보세요</h4><hr>
+    <img id="rotateImage" src="../../img/food1.png">
+    <script>
+        let deg = 0;
+        let image = document.getElementById("rotateImage");
+        image.onclick = rotate; //이벤트쓰면 뒤에 괄호빼야댐
+
+        function rotate(){
+            deg = deg + 11520; // 이거는 각도
+            image.style.transform = "rotate(" + deg +"deg)"
+        }
+
+        //다른방법
+        // image.onclick = function (){
+        //     deg = deg + 11520;  
+        //     image.style.transform = "rotate(" + deg +"deg)"
+        // }
+
+
+        // image.onclick = ()=>{
+        //     deg = deg + 11520;  
+        //     image.style.transform = "rotate(" + deg +"deg)"
+        //
+    </script>
+</body>
+</html>

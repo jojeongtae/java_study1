@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <img src="../../img/africa.jpg" id="slider-image" style="height: 500px; width: 500px;">
+       <br>
+        <input type="button" onclick="prevImage()" id="back_but" value="이전">
+        <input type="button" onclick="nextImage()" id="next_but" value="다음">
+    </div>
+    <script>
+
+        
+        let index = 0;
+        const images = [
+            "../../img/africa.jpg",
+            "../../img/africa1.jpg",
+            "../../img/africa2.jpg",
+            "../../img/africa3.jpg"
+        ];
+        function prevImage(){
+            index = (index -1 + images.length) % images.length;
+            document.getElementById('slider-image').src = images[index];
+        }
+        function nextImage(){
+            index = (index +1) % images.length;
+            document.getElementById('slider-image').src = images[index];
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

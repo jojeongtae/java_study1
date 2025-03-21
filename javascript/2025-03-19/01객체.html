@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>할일 목록</h1>
+    <input type="text" id="todoInput" placeholder="할일을 입력해주세요">
+    <button onclick="addtodo()">보튼</button>
+    <ul id="todoList">
+        <li class="todo-item" id="todo1"></li>
+        <li class="todo-item" id="todo2"></li>
+        <li class="todo-item" id="todo3"></li>
+        <li class="todo-item" id="todo4"></li>
+        <li class="todo-item" id="todo5"></li>
+
+    </ul>
+    <script>
+        let count = 1;
+        let todoList = [];
+        function addtodo(){
+            if(count > 5){
+                alert("5개 이상은 입력할수 없습니다");
+            }else{
+                const todo = document.getElementById("todoInput");
+                const li = document.getElementById("todo"+count);
+                li.innerText = todo.value;
+                todoList.push(todo.value);
+                todo.value = "";
+                count++;
+            }
+        }
+
+
+        //다른방법
+        // function addtodo(){
+        //     document.getElementById("todoList").innerHTML="<li class='todo-item' id=''></li>"
+        // }
+    </script>
+
+
+
+</body>
+</html>

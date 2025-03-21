@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<select id= "myoption">
+    <option value="dog">개</option>
+    <option value="cat">고양이</option>
+    <option value="duck">오리</option>
+    <option value="koala">코알리</option>
+</select><br>
+<input type="button" value="클릭" onclick="selectOption()">
+<hr>
+<h2 id ="result"></h2>
+
+
+
+<script>
+function selectOption(){
+    const index = document.getElementById("myoption").selectedIndex;
+    const st = document.getElementById("myoption").options[index].value;
+    document.getElementById("result").innerText = st;
+}
+
+
+    </script>
+
+
+</body>
+
+</html>

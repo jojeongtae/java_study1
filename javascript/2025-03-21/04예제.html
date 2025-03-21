@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>사용자 목록</h1>
+    <input type="submit" name="nameBut" id="but1" value="사용자 추가">
+    <ul id="main">
+    </ul>
+    <script>
+        let num = 0;
+        let person = [];
+
+        //parseInt랑 Math.floor의 차이는
+        // parseInt는 문자열을 정수로 만들때 사용
+        //Math.floor는 숫자를 내림 할때 사용
+        //빈배열에 입력받은 값을 여러개 추가할땐 ,push({??,??}) <중괄호 안에 넣어준다 
+        while (true) {
+            let name = prompt('이름입력 -1입력시 종료');
+
+            if (name === "-1") {
+                break;
+            }
+            let age = parseInt(prompt("나이입력 -1입력시 종료"));
+
+            if (age === -1) {
+                break;
+            }
+            person.push({name, age});
+            continue;
+        }
+        // 밑은 다를거없음
+        document.getElementById("but1").addEventListener("click", (e) => {
+            let creatLi = document.createElement('li');
+            creatLi.innerText = `${person[num].name} (${person[num].age})세`;
+            document.getElementById('main').appendChild(creatLi);
+            num++;
+            if (num >= person.length) {
+                document.getElementById("but1").disabled = true;
+            }
+        });
+
+        //디져블 속성써서 버튼 비활성화 true면 비활성화
+    </script>
+</body>
+
+</html>

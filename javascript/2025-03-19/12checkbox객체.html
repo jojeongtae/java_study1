@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" name="myadd" value="1500" checked="true" onclick="getcheckbox('check1')" id="check1">
+    <label for="check1">추가채소 1500원</label><bR>
+    <input type="checkbox" name="myadd" value="1000" onclick="getcheckbox('check2')" id="check2">
+    <label for="check2">추가음료 1000원</label><bR>
+    <input type="checkbox" name="myadd" value="500" onclick="getcheckbox('check3')" id="check3">
+    <label for="check3">추가피클 500원</label><bR>
+    <p id="result"></p>
+<input type="button" value="reset" onclick="resetbut()">
+
+    <script>
+        // resetbut().onload;
+        
+        // function getcheckbox(){
+        //     let sum = 0;
+        //     const adds = document.getElementsByName("myadd");
+        //     for(let i=0 ; i<adds.length ;i++){
+        //         if(adds[i].checked){
+        //             sum += parseInt(adds[i].value);
+        //         }
+        //     }
+        //     document.getElementById("result").innerText = `추가금: ${sum}원`;
+        // }
+        // function resetbut(){
+        //     const adds = document.getElementsByName("myadd");
+        //     for(let i=0 ; i<adds.length ;i++){
+        //         if(adds[i].checked){
+        //            adds[i].checked = false;
+        //         }
+        //     }
+        //     const reset = document.getElementById("result").innerText ="추가금: 0원";
+            
+        // }
+        
+
+
+        //강사님이한거
+        
+        let sum = 0;
+        const adds = document.getElementsByName("myadd");
+        for(let add of adds){
+            if(add.checked){
+            sum = sum + parseInt(add.value)
+            }
+        }
+        document.getElementById("result").innerText = `추가금: ${sum}원`;
+
+
+     function getcheckbox(id){
+            const adds = document.getElementById(id);
+            if(adds.checked){
+                sum += parseInt(adds.value);
+            }else{
+                sum -= parseInt(adds.value);
+            }
+            document.getElementById("result").innerText = `추가금: ${sum}원`;
+        }
+        function resetbut(){
+            sum = 0;
+            // const adds = document.getElementsByName("myadd");
+            for(let add of adds){
+                add.checked = false;
+            }
+            document.getElementById("result").innerText = "추가금 : 0원"
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
